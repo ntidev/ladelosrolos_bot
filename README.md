@@ -11,6 +11,16 @@ The idea is to:
 
 The bot will run, look for a random row only if it hasn't been sent before. Send the question to slack and then mark it as sent. 
 
+# Run with docker
+
+After running the `populate_DB.py` script, you can run the bot with the following command:
+
+```bash
+docker-compose up
+```
+
+Now you can see the bot running in the docker container.
+
 ## Potential Enhancements
 - Add: Try Except
 - Improve DB creation and population
