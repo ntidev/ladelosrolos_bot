@@ -17,4 +17,6 @@ RUN apt-get -y install cron
 RUN crontab -l | { cat; echo "* * * * * . $HOME/.profile && cd /app && export SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt && /usr/local/bin/python /app/bot.py > /proc/1/fd/1 2>/proc/1/fd/2"; } | crontab -
 
 # Run the command on container startup
-CMD ["cron", "-f"]
+EXPOSE 7000
+
+CMD python -m http.server 7000
