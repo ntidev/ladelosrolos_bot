@@ -19,7 +19,8 @@ def dbConnection():
     connection = mysql.connector.connect(user=os.environ['DBUSERNAME'],
                                         password=os.environ['DBPASSWORD'],
                                         host=os.environ['DBHOST'],
-                                        database=os.environ['DBNAME'])
+                                        database=os.environ['DBNAME'],
+                                        port=os.environ['DBPORT'])
 
     return connection
 
