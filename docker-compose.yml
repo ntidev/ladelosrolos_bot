@@ -2,3 +2,5 @@ version: "3"
 services:
   ladelosrolos-bot:
     build: .
+    ports:
+      - 7000:7000
